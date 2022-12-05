@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body, div, form, input, select, div, p, select { 
+        padding: 20;
+        margin: 20;
+        outline: none;
+        font-family: Roboto, Arial, sans-serif;
+        font-size: 14px;
+        color: #666;
+        line-height: 22px;
+        }
+        form, p{
+        width: 97%;
+        padding: 20px;
+        border-radius: 6px;
+        background: #fff;
+        box-shadow: 0 0 8px  #669999; 
+        }
+        input, select {
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        }
+        input:hover, select:hover {
+        border: 1px solid transparent;
+        box-shadow: 0 0 3px 0  #669999;
+        color: #669999;
+        }
+        .flax {
+        display:flex;
+        justify-content:space-around;
+        }
+        .btn-block {
+        margin-top: 10px;
+        text-align: center;
+        }
+        button {
+        width: 150px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px; 
+        background:  #669999;
+        font-size: 16px;
+        color: #fff;
+        cursor: pointer;
+        }
+        button:hover {
+        background:  #a3c2c2;
+        }
+      </style>
+</head>
+<body>
+    <form id="addUser">
+        <input name="id" placeholder="id" value="0" hidden>
+        <input name="name" placeholder="name">
+        <input name="age" placeholder="age">
+        <select name="status">
+            <option value="false">InActive</option>
+            <option value="true">Active</option>
+        </select>
+        <div class="btn-block">
+            <button type="submit">Submit</button>
+          </div>
+    </form>
+
+    <br>
+    <hr>
+    <br>
+    
+    <div id="dataWrap"></div>
+    <script src="src.js"></script>
+</body>
+</html>
