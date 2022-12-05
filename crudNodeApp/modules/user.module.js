@@ -66,6 +66,23 @@ class User{
             console.log(chalk.red.bold("User Not Found!"))
     }
     
-    static del(){}
+    static del(data){
+        const all = deal.readFromJson()
+        let single = all.filter(user => user.id == data.id);
+        all.forEach((user , index) => {
+            if (user.id == data.id)
+            {
+                heads.forEach(head => {
+                    if(user[head.key] != null)
+                        console.log(chalk.red(head.key + ": " + user[head.key]))
+                });
+                console.log(chalk.red.bold( "\"User Removed Successfully\""))
+                all.splice(index,1)
+                deal.writeToJson(all) 
+            } 
+        });
+        if(!single.length)
+            console.log(chalk.red.bold("User Not Found!"))
+    }
 }
 module.exports = User
