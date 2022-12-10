@@ -1,0 +1,33 @@
+{{>header}}
+{{>navbar}}
+{{>navbarend}}
+
+<section class="my-5 container">
+    <h4>Add New Book</h4>
+    <hr/>
+
+    <form class="row g-3" method="post">
+        <div class="col-12">
+            <label for="name" class="form-label">Book Name</label>
+            <input name="name" type="text" class="form-control" id="name" placeholder="Book Name">
+        </div>
+        <div class="col-12">
+            <label for="author" class="form-label">Author</label>
+            <input name="author" type="text" class="form-control" id="author" placeholder="Author Name">
+        </div>
+        <div class="col-md-6">
+            <label for="type" class="form-label">Type</label>
+            <input name="type" type="text" class="form-control" id="type" placeholder="Book Type">
+        </div>
+        <div class="col-md-6">
+            <label for="pages" class="form-label">Pages</label>
+            <input name="pages" type="number" class="form-control" id="pages" placeholder="Number of pages">
+        </div>
+        <div class="col-md-12 text-center">
+            <button type="submit" class="btn btn-primary">Add</button>
+            <button type="reset" class="btn btn-secondary">Reset</button>
+        </div>
+    </form>
+</section>
+
+{{>footer}}

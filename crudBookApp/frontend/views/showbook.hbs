@@ -1,0 +1,47 @@
+{{>header}}
+{{>navbar}}
+{{>navbarend}}
+
+<section class="my-5 container">
+
+    {{#unless book}}
+    <div class="alert alert-danger">
+        Invalid book id
+    </div>
+
+    {{else}}
+    <h4>Book Details</h4>
+    <hr/>
+
+    <form class="row g-3">
+        <div class="col-12">
+            <label for="id" class="form-label">Book ID</label>
+            <input name="id" type="text" class="form-control" id="id" value="{{book.id}}" disabled>
+        </div>
+        <div class="col-12">
+            <label for="name" class="form-label">Book Name</label>
+            <input name="name" type="text" class="form-control" id="name" value="{{book.name}}" disabled> 
+        </div>
+        <div class="col-12">
+            <label for="author" class="form-label">Author</label>
+            <input name="author" type="text" class="form-control" id="author"  value="{{book.author}}" disabled>
+        </div>
+        <div class="col-md-6">
+            <label for="type" class="form-label">Type</label>
+            <input name="type" type="text" class="form-control" id="type"  value="{{book.type}}" disabled> 
+        </div>
+        <div class="col-md-6">
+            <label for="pages" class="form-label">Pages</label>
+            <input name="pages" type="number" class="form-control" id="pages"  value="{{book.pages}}" disabled>
+        </div>
+        <div class="col-md-12 text-center">
+            <a href="/editbook/{{book.id}}" class="btn btn-success mx-3">Edit</a>
+            <a href="/delbook/{{book.id}}" class="btn btn-danger mx-3">Delete</a>
+        </div>
+    </form> 
+    {{/unless}}
+
+</section>
+
+
+{{>footer}}
