@@ -1,0 +1,18 @@
+<div class="container">
+  <br>
+  <div class="mb-3">
+    <input type="text" class="form-control" placeholder="Search using title...." #searchKey/>
+    <button class="btn btn-secondary" (click)="search(searchKey.value)">search</button>
+  </div>
+  <br>
+
+  <div class="card" *ngFor="let card of cards; let i =index">
+    <h5 class="card-header">{{card.id}} - {{card.title}}</h5>
+    <div class="card-body">
+      <p class="card-text">{{card.body}}</p>
+      <button class="btn btn-primary" (click)="editTitle(i)">edit</button>
+      <button class="btn btn-danger" (click)="delete(i)">delete</button>
+    </div>
+  </div>
+</div>
+
