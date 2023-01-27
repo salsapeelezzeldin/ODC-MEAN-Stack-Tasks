@@ -1,0 +1,23 @@
+<div class="container">
+  <br>
+  <div class="mb-3">
+    <input type="text" class="form-control" placeholder="Search using title...." #searchKey/>
+    <button class="btn btn-secondary" (click)="search(searchKey.value)">search</button>
+  </div>
+  <br>
+
+  <div class="card" *ngFor="let proj of projects; let i =index">
+    <h5 class="card-header">{{proj.name}}</h5>
+    <div class="card-body">
+      <p class="card-text">
+        ID: {{proj._id}} <br>
+        type: {{proj.type}} <br>
+        owner: {{proj.owner}}
+      </p>
+      <button class="btn btn-primary" routerLink="/projects/{{proj._id}}">details</button>
+      <button class="btn btn-success" (click)="editName(i)">edit</button>
+      <button class="btn btn-danger" (click)="delete(i)">delete</button>
+    </div>
+  </div>
+</div>
+
